@@ -55,17 +55,17 @@ class VMenu
   	$nouveau_fond = isset($_SESSION['ADMIN_THEMES']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form_fond"><button>NOUVEAU FOND</button></a></p>' : '';
   	 
   	echo <<<HERE
-<div class="top-bar">
-      <li class="menu-text"><a href="../Php/index.php">CatClinic</a></li>
-  	<ol id="menu" class="vertical medium-horizontal menu">
+    <div class="top-bar">  
+  	<ol class="menu align-center">
   	 $li
   	</ol>
+    <div  id="admin_themes"><a class="button" href="../Php/index.php?EX=admin_themes">Admin</a></div>
     </div>
   	
   	$nouveau
   	$nouveau_fond
   			
-    <div  id="admin_themes"><a class="button success" href="../Php/index.php?EX=admin_themes">Admin</a></div>
+    
    
 HERE;
   	 
