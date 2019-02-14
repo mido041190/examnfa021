@@ -63,5 +63,13 @@ $vcontent = new $content['class']();
     </div>
   </div>
 </div>
+
+<footer>
+<div class="callout primary">
+  <p>SUZANNE Xavier . Examen NFA021 : CATCLINIC</p>
+</div>
+</footer>
+
+
 </body>
 </html>
