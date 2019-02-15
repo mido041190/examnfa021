@@ -1,10 +1,13 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Foundation | Welcome</title>
+<link rel="stylesheet" href="../Css/app.css">
+</head>
+
 <?php
-/**
- * Fichier de mise en page
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXAM-CNAM
- */
 
 global $content;
 $vmenu = new VMenu();
@@ -28,12 +31,12 @@ $vcontent = new $content['class']();
   <?php $vcontent->{$content['method']}($content['arg']) ?>
  </div><!-- id="content" -->
   
-   
+<hr>   
 <div class="grid-container">
   <div class="grid-x grid-padding-x small-up-2 medium-up-3">
     <div class="cell">
       <div class="card">
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44842.82930008711!2d4.914948991929433!3d45.37551599276038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5250bf95b336d%3A0xc3e72e02dbaeabd4!2s38270+Bellegarde-Poussieu!5e0!3m2!1sfr!2sfr!4v1549871328200" width="600" height="275" frameborder="0" style="border:0" allowfullscreen></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44842.82930008711!2d4.914948991929433!3d45.37551599276038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5250bf95b336d%3A0xc3e72e02dbaeabd4!2s38270+Bellegarde-Poussieu!5e0!3m2!1sfr!2sfr!4v1549871328200" width="600" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
         <div class="card-section">
         <h4>Adresse</h4>
           <p>route des chats noirs, 38270 Jarcieu</p>
@@ -65,8 +68,10 @@ $vcontent = new $content['class']();
 </div>
 
 <footer>
-<div class="callout primary">
+<div class="callout ">
+  <div class="row column text-center">
   <p>SUZANNE Xavier . Examen NFA021 : CATCLINIC</p>
+</div>
 </div>
 </footer>
 

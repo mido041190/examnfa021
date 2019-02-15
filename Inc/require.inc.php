@@ -1,11 +1,13 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Foundation | Welcome</title>
+<link rel="stylesheet" href="../Css/app.css">
+</head>
+
 <?php
-/**
- * Fichier d'inclusion des constantes et des fonctions
- * dont à besoin l'application en particulier l'Autoload
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXAM-CNAM
- */
 
 // Constantes pour la Base de données
 define('DEBUG', true);

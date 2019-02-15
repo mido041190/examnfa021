@@ -1,11 +1,14 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Foundation | Welcome</title>
+<link rel="stylesheet" href="../Css/app.css">
+</head>
+
 <?php
-/**
- * Affichage du menu
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXAM-CNAM
- *
- */
+
 class VMenu
 {
   /**
@@ -32,6 +35,7 @@ class VMenu
   	$data = $mthemes->SelectAll();
 
   	$li = '';
+    $lii = '';
   	foreach ($data as $val)
   	{
       if (isset($_SESSION['ADMIN_THEMES']))
@@ -44,6 +48,7 @@ class VMenu
   	  }
   	  
   	  $li .= '<li><a '.$class.' href="'.$href.'">'.$val['THEME'].'</a></li>';
+      $lii = '<li><a href="../Php/index.php?EX=specialites">Spécialités</a></li>';
   	}
 
   	if (isset($_SESSION['ADMIN_DOC']) || isset($_SESSION['ADMIN_THEMES']))
@@ -53,6 +58,9 @@ class VMenu
   	
   	$nouveau = isset($_SESSION['ADMIN_THEMES']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form_theme"><button>NOUVEAU THEME</button></a></p>' : '';	 
   	$nouveau_fond = isset($_SESSION['ADMIN_THEMES']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form_fond"><button>NOUVEAU FOND</button></a></p>' : '';
+
+    
+
   	 
   	echo <<<HERE
     <div class="top-bar">
@@ -64,6 +72,9 @@ class VMenu
 <div class="top-bar-right">
 <ul class="menu">
 $li
+$lii
+       
+  
 <div  id="admin_themes"><a class="button" href="../Php/index.php?EX=admin_themes">Admin</a></div>
 </ul>
 </div>

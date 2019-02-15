@@ -1,10 +1,14 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Foundation | Welcome</title>
+<link rel="stylesheet" href="../Css/app.css">
+</head>
+
 <?php
-/**
- * Contrôleur
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXAM-CNAM
- */
+
  
 // Inclusion des constantes et des fonctions de l'application
 // en particulier l'Autoload
@@ -21,6 +25,7 @@ $EX = isset($_REQUEST['EX']) ? $_REQUEST['EX'] : 'home';
 switch($EX)
 {
   case 'home'         : home();         break;
+  case 'specialites'  : specialites();  break;
   case 'admin_themes' : admin_themes(); break;
   case 'form_theme'   : form_theme();   break;
   case 'insert_theme' : insert_theme(); break;
@@ -54,6 +59,23 @@ function home()
   $content['class'] = 'VHtml';
   $content['method'] = 'showHtml';
   $content['arg'] = '../Html/home.html';
+  
+  return;
+
+} // home()
+
+/**
+ * Affichage de la page spécialités
+ * @return none
+ */
+function specialites()
+{
+  global $content;
+  
+  $content['title'] = 'Specialites';
+  $content['class'] = 'VHtml';
+  $content['method'] = 'showHtml';
+  $content['arg'] = '../Html/specialites.html';
   
   return;
 
@@ -228,6 +250,7 @@ function pdf()
 {
   $file = '../Upload/' . $_GET['FICHIER'];
   
+  
   if (file_exists($file)) 
   {
     header("Content-Disposition: attachment; filename=".urlencode(basename($file)));
@@ -238,6 +261,8 @@ function pdf()
         
     exit;
   }
+
+ 
   else
   {
     global $content;

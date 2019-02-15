@@ -1,11 +1,14 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Foundation | Welcome</title>
+<link rel="stylesheet" href="../Css/app.css">
+</head>
+
 <?php
-/**
- * Fichier de classe de type Vue
- * pour l'affichage des fichiers html ou html.php
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXAM-CNAM
- */
+
  
 /**
  * Classe pour l'affichage des fichiers html ou html.php
@@ -31,7 +34,7 @@ class VHtml
   /**
    * Affichage du fichier html ou html.php
    * @access public
-   * @param string fichier html ou html.php à affificher
+   * @param string fichier html ou html.php à afficher
    *
    * @return none
    */
