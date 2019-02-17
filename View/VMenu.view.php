@@ -36,6 +36,7 @@ class VMenu
 
   	$li = '';
     $lii = '';
+    $lio = '';
   	foreach ($data as $val)
   	{
       if (isset($_SESSION['ADMIN_THEMES']))
@@ -49,6 +50,7 @@ class VMenu
   	  
   	  $li .= '<li><a '.$class.' href="'.$href.'">'.$val['THEME'].'</a></li>';
       $lii = '<li><a href="../Php/index.php?EX=specialites">Spécialités</a></li>';
+      $lio = '<li><a href="../Php/index.php?EX=equipe">Equipe</a></li>';
   	}
 
   	if (isset($_SESSION['ADMIN_DOC']) || isset($_SESSION['ADMIN_THEMES']))
@@ -73,8 +75,7 @@ class VMenu
 <ul class="menu">
 $li
 $lii
-       
-  
+$lio     
 <div  id="admin_themes"><a class="button" href="../Php/index.php?EX=admin_themes">Admin</a></div>
 </ul>
 </div>

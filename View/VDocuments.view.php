@@ -48,17 +48,22 @@ class VDocuments
     $nouveau = isset($_SESSION['ADMIN_DOC']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form"><button>NOUVEAU DOCUMENT</button></a></p>' : '';   
            
     echo <<<HERE
-<h2 class="theme">{$_SESSION['THEME']}</h2>
-<table class="hover" id="table_documents" >
- <thead>
-  <tr>
-   <th>Titre</th><th>Auteur</th><th>Fichier</th>
-  </tr>
- </thead>
- <tbody>
-  $tr
- </tbody>
+    <div class="tabfiches">
+    <h2 class="theme">{$_SESSION['THEME']}</h2>
+<table>
+  <thead>
+    <tr>
+      <th width="200">Titre</th>
+      <th width="150"></th>
+      <th width="150">FIchier</th>
+    </tr>
+  </thead>
+  <tbody>
+    $tr
+  </tbody>
 </table>
+</div>
+
   		
 $nouveau
   		

@@ -26,6 +26,7 @@ switch($EX)
 {
   case 'home'         : home();         break;
   case 'specialites'  : specialites();  break;
+  case 'equipe'       : equipe();       break;
   case 'admin_themes' : admin_themes(); break;
   case 'form_theme'   : form_theme();   break;
   case 'insert_theme' : insert_theme(); break;
@@ -76,6 +77,23 @@ function specialites()
   $content['class'] = 'VHtml';
   $content['method'] = 'showHtml';
   $content['arg'] = '../Html/specialites.html';
+  
+  return;
+
+} // home()
+
+/**
+ * Affichage de la page equipe
+ * @return none
+ */
+function equipe()
+{
+  global $content;
+  
+  $content['title'] = 'Equipe';
+  $content['class'] = 'VHtml';
+  $content['method'] = 'showHtml';
+  $content['arg'] = '../Html/equipe.html';
   
   return;
 
