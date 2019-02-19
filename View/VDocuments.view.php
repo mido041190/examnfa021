@@ -55,7 +55,7 @@ class VDocuments
     <tr>
       <th width="200">Titre</th>
       <th width="150"></th>
-      <th width="150">FIchier</th>
+      <th width="150">Fichier</th>
     </tr>
   </thead>
   <tbody>

@@ -271,11 +271,8 @@ function pdf()
   
   if (file_exists($file)) 
   {
-    header("Content-Disposition: attachment; filename=".urlencode(basename($file)));
-    header("Content-Type: " . mime_content_type($file));
-    header("Content-Length: ".filesize($file));
-    header("Cache-Control: no-cache, must-revalidate");
-    readfile($file);
+    $document = file_get_contents($file);
+    echo $document;
         
     exit;
   }

@@ -56,7 +56,7 @@ $vcontent = new $content['class']();
       <div class="card">
         <a href="../Php/index.php"><img src="../Img/logocatclinic.png"/></a>
         <div class="card-section">
-          <h4>Horaires.</h4>
+          <h4>Horaires</h4>
             <p>Du Lundi au Vendredi de 8h30 à 19h30</p>
             <p>Le Samedi de 8h30 à 18h00</p>
             <p>Le Dimanche de 10h00 à 12h00</p>

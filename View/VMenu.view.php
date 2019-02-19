@@ -68,7 +68,7 @@ class VMenu
     <div class="top-bar">
 <div class="top-bar-left">
 <ul class="menu">
-<li class="menu-text">CatClinic</li>
+<li class="menu-text"><a href="../Php/index.php">CatClinic</a></li>
 </ul>
 </div>
 <div class="top-bar-right">
