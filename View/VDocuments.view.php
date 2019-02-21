@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Foundation | Welcome</title>
 <link rel="stylesheet" href="../Css/app.css">
+<link rel="stylesheet" href="../Css/form-modif.css">
 </head>
 
 <?php
@@ -105,7 +106,7 @@ HERE;
 
   	  $options .= '<option '.$selected.' value="'.$val1['ID_THEME'].'">'.$val1['THEME'].'</option>';
   	  	
-  	  $delete = $data_doc ? '<p class="delete"><a href="../Php/index.php?EX=delete&amp;ID_DOC='.$data_doc['ID_DOC'].'&amp;FICHIER_OLD='.$data_doc['FICHIER'].'"><button>Supprimer</button></a></p>' : '';
+  	  $delete = $data_doc ? '<div class="row column text-center"><p class="hollow button"><a href="../Php/index.php?EX=delete&amp;ID_DOC='.$data_doc['ID_DOC'].'&amp;FICHIER_OLD='.$data_doc['FICHIER'].'"><button>Supprimer</button></a></p></div>' : '';
   	}
 
   	if ($data_doc)
@@ -126,34 +127,40 @@ HERE;
   	}
   	
   	echo <<<HERE
+    
 <form action="../Php/index.php?EX=$ex" method="post" enctype="multipart/form-data">
  <fieldset>
-  <legend>Formulaire</legend>
+  <div class="titre1">Formulaire</div>
+  <div class="formcontent">
   <p>
-   <label for="titre">Titre</label>
-   <input id="titre" name="TITRE" value="$titre" size="15" maxlength="50" />
+   <label class="form-control" for="titre">Titre</label>
+   <input class="form-control" id="titre" name="TITRE" value="$titre" size="15" maxlength="50" />
   </p>
+ 
   <p>
-   <label for="auteur">Auteur</label>
-   <input id="auteur" name="AUTEUR" value="$auteur" size="15" maxlength="50" />
-  </p>
-  <p>
-   <label for="themes">Thèmes</label>
-   <select id="themes" name="ID_THEME[]" multiple="multiple">
+   <label class="form-control" for="themes">Thèmes</label>
+   <select class="form-control" id="themes" name="ID_THEME[]" multiple="multiple">
     $options
    </select>
   </p>
+
   <p class="fichier">
-   <label for="fichier">$fichier</label><br />
-   <input type="hidden" name="FICHIER_OLD" value="$fichier_old" />
-   <input id="fichier" type="file" name="FICHIER" value="" size="15" maxlength="40" />
+   <label class="form-control" for="fichier">$fichier</label>
+   <input type="hidden" class="form-control" name="FICHIER_OLD" value="$fichier_old" />
+   </p>
+   <p>
+   <input class="choisir" id="fichier" type="file" name="FICHIER" value="" size="15" maxlength="40" />
   </p>
+
   <p class="submit">
-   <input type="submit" value="Ok" />
+   <input class="form-submit" type="submit" value="Ok" />
   </p>
+
  </fieldset>
 </form>
+</div>
 $delete
+
 HERE;
   	
   	return;
