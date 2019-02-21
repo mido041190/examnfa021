@@ -58,9 +58,9 @@ class VMenu
   	  $li .= '<li><a '.$class.' href="../Php/index.php?EX=deconnect">DECONNEXION</a></li>';
   	}
   	
-  	$nouveau = isset($_SESSION['ADMIN_THEMES']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form_theme"><button>NOUVEAU THEME</button></a></p>' : '';	 
+  	/*$nouveau = isset($_SESSION['ADMIN_THEMES']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form_theme"><button>NOUVEAU THEME</button></a></p>' : '';	 
   	$nouveau_fond = isset($_SESSION['ADMIN_THEMES']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form_fond"><button>NOUVEAU FOND</button></a></p>' : '';
-
+*/
     
 
   	 
@@ -76,13 +76,11 @@ class VMenu
 $li
 $lii
 $lio     
-<div  id="admin_themes"><a class="button" href="../Php/index.php?EX=admin_themes">Admin</a></div>
+<div  id="admin"><a class="button" href="../Php/index.php?EX=admin">Admin</a></div>
 </ul>
 </div>
 </div>
-  	
-  	$nouveau
-  	$nouveau_fond
+  
   			
     
    

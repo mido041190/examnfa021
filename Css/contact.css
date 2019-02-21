@@ -1,0 +1,38 @@
+.formcontent {
+	display: flex;
+	justify-content: center;
+	font-family: 'Crimson Text', serif;
+	padding-top: 30px;
+	text-align: center;
+
+
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	font-family: 'Crimson Text', serif;
+	padding-top: 50px;
+	text-transform: uppercase;
+}
+
+.form-control {
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid gray;
+	color: #fff;
+}
+
+.form-submit {
+	background: #0787ce;
+	border-color: transparent;
+	color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.form-submit:hover {
+	background-color: #ADD8E6;
+	cursor: pointer;
+}

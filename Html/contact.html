@@ -4,10 +4,29 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Foundation | Welcome</title>
-<link rel="stylesheet" href="../Css/app.css">
+<link rel="stylesheet" href="../Css/contact.css">
 </head>
 
 <body>
+	<h1>Formulaire de contact</h1>
+<div class="formcontent">
 	
+    <form onsubmit="return verifForm(this)" id="contact-form" method="post" action="contact-form.php">
+    <p> 
+        <input class="form-control" name="nom" placeholder="Nom" required >
+    </p>
+    <p> 
+        <input class="form-control" name="email" placeholder="Email" required>
+    </p>
+    <p> 
+        <input class="form-control" name="message" placeholder="Message" required size="15" maxlength="50">
+    </p>
+    <p> <input class="form-submit" type="submit" value="envoyer">
+    </p>
+    </form>
+</div>   
+
+
+ <script src="../js/form.js"></script>
 </body>
 </html>

@@ -45,7 +45,9 @@ class VDocuments
       }
     }
     
-    $nouveau = isset($_SESSION['ADMIN_DOC']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form"><button>NOUVEAU DOCUMENT</button></a></p>' : '';   
+    $nouveau = isset($_SESSION['ADMIN_DOC']) ? '<div class="row column text-center">
+    <p><a class="hollow button" href="../Php/index.php?EX=form"><button>NOUVEAU DOCUMENT</button></a></p>
+    </div>' : '';   
            
     echo <<<HERE
     <div class="tabfiches">
@@ -64,10 +66,9 @@ class VDocuments
 </table>
 </div>
 
-  		
 $nouveau
   		
-<div id="admin"><a href="../Php/index.php?EX=admin"></a></div>
+
 HERE;
    
   } // showDocuments($_data)
