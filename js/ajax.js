@@ -1,9 +1,4 @@
-/**
- * Fonctions javascript utilisant les appels aux serveur http
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXERCICE-MOOC
- */
+
 var DEBUG_AJAX = false;
 
 /**

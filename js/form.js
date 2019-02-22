@@ -1,9 +1,4 @@
-/**
- * Fonctions utilisées pour les formulaires
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXO-MOOC
- */
+
 
 // Tableau des éléments obligatoires du formulaire
 var elemRequired = new Array();

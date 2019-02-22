@@ -1,9 +1,3 @@
-/**
- * Fichier Javascript de l'application
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXERCICE-MOOC
- */
 
 /**
  * Modifie le contenu de l'élément <div id="content">

@@ -1,11 +1,5 @@
 <?php
-/**
- * Class de type Modèle gérant la table THEMES
- * 
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXAM-CNAM
- */
+
 class MThemes
 {
   /**

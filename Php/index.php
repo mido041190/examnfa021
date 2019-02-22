@@ -30,6 +30,7 @@ switch($EX)
   case 'contact'      : contact();      break;
   case 'page'         : page();         exit;
   case 'change'       : change();       exit;
+  case 'connexionged' : connexionged(); break;
   case 'admin_themes' : admin_themes(); break;
   case 'form_theme'   : form_theme();   break;
   case 'insert_theme' : insert_theme(); break;
@@ -204,6 +205,23 @@ function change()
   return;
   
 } // change()
+
+/**
+ * Affichage de la page connexionged
+ * @return none
+ */
+function connexionged()
+{
+  global $content;
+  
+  $content['title'] = 'Espace membre';
+  $content['class'] = 'VHtml';
+  $content['method'] = 'showHtml';
+  $content['arg'] = '../Html/connexionged.php';
+  
+  return;
+
+} // home()
 
 /**
  * Affichage de la page d'accueil 

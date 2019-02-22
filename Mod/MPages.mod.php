@@ -1,11 +1,5 @@
 <?php
-/**
- * Fichier de classe de type Modèle 
- * pour la lecture et la gestion de fichier texte
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXO-MOOC
- */
+
 class MPages
 {
   /**

@@ -1,9 +1,4 @@
-/**
- * Fichier Javascript appelant tous les autres fichiers
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXERCICE-MOOC
- */
+
 
 var src = new Array();
 var i = 0;

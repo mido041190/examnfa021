@@ -36,3 +36,20 @@ h1 {
 	background-color: #ADD8E6;
 	cursor: pointer;
 }
+
+.membrecontent {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 500px;
+	padding-right: 500px;
+}
+
+.membrecontent h2{
+	font-family: 'Crimson Text', serif;
+	font-size: 30px;
+}
+
+.message {
+	padding: 50px;
+	position: relative;
+}

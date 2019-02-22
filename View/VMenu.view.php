@@ -51,6 +51,7 @@ class VMenu
   	  $li .= '<li><a '.$class.' href="'.$href.'">'.$val['THEME'].'</a></li>';
       $lii = '<li><a href="../Php/index.php?EX=specialites">Spécialités</a></li>';
       $lio = '<li><a href="../Php/index.php?EX=equipe">Equipe</a></li>';
+      $liu = '<li><a href="../Php/index.php?EX=connexionged">Membre</a></li>';
   	}
 
   	if (isset($_SESSION['ADMIN_DOC']) || isset($_SESSION['ADMIN_THEMES']))
@@ -76,7 +77,7 @@ class VMenu
 $li
 $lii
 $lio     
-<div  id="admin"><a class="button" href="../Php/index.php?EX=admin">Admin</a></div>
+$liu
 </ul>
 </div>
 </div>

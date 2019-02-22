@@ -1,9 +1,4 @@
-/**
- * Fichier Javascript d'initialisation des écouteurs
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXERCICE-MOOC
- */
+
 
 /**
  * Fonction générique de déclenchement des listeners
