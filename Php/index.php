@@ -28,6 +28,8 @@ switch($EX)
   case 'specialites'  : specialites();  break;
   case 'equipe'       : equipe();       break;
   case 'contact'      : contact();      break;
+  case 'page'         : page();         exit;
+  case 'change'       : change();       exit;
   case 'admin_themes' : admin_themes(); break;
   case 'form_theme'   : form_theme();   break;
   case 'insert_theme' : insert_theme(); break;
@@ -77,7 +79,7 @@ function specialites()
   $content['title'] = 'Specialites';
   $content['class'] = 'VHtml';
   $content['method'] = 'showHtml';
-  $content['arg'] = '../Html/specialites.html';
+  $content['arg'] = '../Html/specialites.php';
   
   return;
 
@@ -116,6 +118,82 @@ function contact()
   return;
 
 } // home()
+
+/**
+ *  Affichage des pages
+ *  
+ *  @return none
+ */
+function page()
+{
+  // Aiguille suivant le numéro de page
+  switch($_POST['ID_PAGE'])
+  {
+    case 1 : $html = '../Html/premiere.html';
+             break;
+    case 2 : $html = '../Html/seconde.html';
+             break;
+    case 3 : $html = '../Html/troisieme.html';
+             break;
+  }
+  
+  // Affiche la page
+  $vhtml = new VHtml();
+  $vhtml->showHtml($html);
+  
+  return;
+  
+} // page()
+
+/**
+ * Modification du texte dans la page
+ * 
+ * @return none
+ */
+function change()
+{
+  // Aiguille suivant le numéro de page
+  switch($_POST['ID_PAGE'])
+  {
+    case 1 : $html = '../Html/premiere.html';
+             break;
+    case 2 : $html = '../Html/seconde.html';
+             break;
+    case 3 : $html = '../Html/troisieme.html';
+             break;
+  }
+  
+  // Appelle la classe MPages avec le fichier
+  $mpages = new MPages($html);
+  // Instancie le membre $value avec les valeurs des paramètres
+  $mpages->SetValue($_POST);
+  
+  // Aiguillage suivant le tag
+  switch ($_POST['TAG'])
+  {
+    case 'H1' : // Modifie le titre dans le fichier
+              $mpages->UpdateTitre();
+              // Récupère le texte modifié
+              $value['TEXT'] = $_POST['TITRE'];
+              break;
+    case 'H2' : // Modifie le titre dans le fichier
+              $mpages->UpdateSousTitre();
+              // Récupère le texte modifié
+              $value['TEXT'] = $_POST['SOUS_TITRE'];
+              break;
+    case 'P'  : // Modifie le titre dans le fichier
+                $mpages->UpdateParagraphe();
+                // Récupère le texte modifié
+                $value['TEXT'] = $_POST['PARAGRAPHE'];
+                break;
+  }
+     
+  // Retourne le texte modifié 
+  echo json_encode($value);
+  
+  return;
+  
+} // change()
 
 /**
  * Affichage de la page d'accueil 

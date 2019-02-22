@@ -1,3 +1,10 @@
+<?php
+
+global $content;
+$vheader = new VHeader();
+$vcontent = new $content['class']();
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -20,6 +27,13 @@
 		<p>-	Hospitalisation	</p>
 		<p>-	Service	de	garde	24h/24	-	7j/7 </p>
 </ol>
+
+
+
+<header>
+ <?php $vheader->showHeader(); ?>
+</header>
 </div>
+<script src="../Js/exercice.js"></script>
 </body>
 </html>

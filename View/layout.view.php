@@ -92,6 +92,6 @@ $vcontent = new $content['class']();
 </div>
 </footer>
 
-
+<script src="../Js/exercice.js"></script>
 </body>
 </html>
