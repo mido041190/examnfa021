@@ -45,6 +45,16 @@ switch($EX)
   case 'insert'       : insert();       break;
   case 'update'       : update();       break;
   case 'delete'       : delete();       break;
+  case 'formulaire' : formulaire();
+                      exit();
+  case 'insertform'     : insertform();
+                      exit();
+  case 'contactsform'   : contactsform();
+                      exit();
+  case 'adminform'      : adminform();
+                      exit();
+  case 'updateform'     : updateform();
+                      exit();
 }
 
 // Mise en page
@@ -582,4 +592,7 @@ function delete()
   return;
 
 } // delete()
+
+
+
 ?>

@@ -15,8 +15,11 @@ $vcontent = new $content['class']();
 </head>
 
 <body>
+	<div class="titrespe">
+	<h2>Les spécialités de la clinique</h2>
+</div>
 <div class="tabspecialites">
-<h2>Les spécialités de la clinique</h2>
+
 <ol class="specialites">
 		<p>-	Radiographie	</p>	
 		<p>-	Echographie	(Abdominale	et échocardiographie)	</p>
@@ -30,10 +33,12 @@ $vcontent = new $content['class']();
 
 
 
-<header>
+
+</div>
+
+<header class="headerspe">
  <?php $vheader->showHeader(); ?>
 </header>
-</div>
-<script src="../Js/exercice.js"></script>
+<script src="../js/exercice.js"></script>
 </body>
 </html>

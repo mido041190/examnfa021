@@ -74,3 +74,5 @@ for( var i = 0; i < nb_click_li; ++i)
   // avec comme fonction associée pages
   Listener(click_li[i], 'click', pages);
 }
+
+
