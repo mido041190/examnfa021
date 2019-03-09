@@ -36,9 +36,6 @@ $vcontent = new $content['class']();
 
 </div>
 
-<header class="headerspe">
- <?php $vheader->showHeader(); ?>
-</header>
 <script src="../js/exercice.js"></script>
 </body>
 </html>

@@ -25,10 +25,10 @@ $EX = isset($_REQUEST['EX']) ? $_REQUEST['EX'] : 'home';
 switch($EX)
 {
   case 'home'         : home();         break;
+  case 'conseils'     : conseils();     break;
   case 'specialites'  : specialites();  break;
   case 'equipe'       : equipe();       break;
   case 'contact'      : contact();      break;
-  case 'page'         : page();         exit;
   case 'change'       : change();       exit;
   case 'connexionged' : connexionged(); break;
   case 'admin_themes' : admin_themes(); break;
@@ -46,16 +46,7 @@ switch($EX)
   case 'insert'       : insert();       break;
   case 'update'       : update();       break;
   case 'delete'       : delete();       break;
-  case 'formulaire' : formulaire();
-                      exit();
-  case 'insertform'     : insertform();
-                      exit();
-  case 'contactsform'   : contactsform();
-                      exit();
-  case 'adminform'      : adminform();
-                      exit();
-  case 'updateform'     : updateform();
-                      exit();
+  
 }
 
 // Mise en page
@@ -76,6 +67,23 @@ function home()
   $content['arg'] = '../Html/home.html';
   
   return;
+
+} // home()
+/**
+ * Affichage de la page conseils
+ * @return none
+ */
+function conseils()
+{
+  global $content;
+  
+  $content['title'] = 'Conseils';
+  $content['class'] = 'VHtml';
+  $content['method'] = 'showHtml';
+  $content['arg'] = '../Html/conseils.html';
+  
+  return;
+
 
 } // home()
 
@@ -130,31 +138,6 @@ function contact()
 
 } // home()
 
-/**
- *  Affichage des pages
- *  
- *  @return none
- */
-function page()
-{
-  // Aiguille suivant le numéro de page
-  switch($_POST['ID_PAGE'])
-  {
-    case 1 : $html = '../Html/premiere.html';
-             break;
-    case 2 : $html = '../Html/seconde.html';
-             break;
-    case 3 : $html = '../Html/troisieme.html';
-             break;
-  }
-  
-  // Affiche la page
-  $vhtml = new VHtml();
-  $vhtml->showHtml($html);
-  
-  return;
-  
-} // page()
 
 /**
  * Modification du texte dans la page

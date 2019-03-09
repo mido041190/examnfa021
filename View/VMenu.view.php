@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Foundation | Welcome</title>
 <link rel="stylesheet" href="../Css/app.css">
+<link rel="stylesheet" href="../Css/menu.css">
 </head>
 
 <?php
@@ -49,9 +50,10 @@ class VMenu
   	  }
   	  
   	  $li .= '<li><a '.$class.' href="'.$href.'">'.$val['THEME'].'</a></li>';
+      $lie = '<li><a href="../Php/index.php?EX=conseils">Conseils</a></li>';
       $lii = '<li><a href="../Php/index.php?EX=specialites">Spécialités</a></li>';
       $lio = '<li><a href="../Php/index.php?EX=equipe">Equipe</a></li>';
-      $liu = '<li><a href="../Php/index.php?EX=connexionged">Membre</a></li>';
+      $liu = '<li><a href="../Php/index.php?EX=connexionged">Membres</a></li>';
   	}
 
   	if (isset($_SESSION['ADMIN_DOC']) || isset($_SESSION['ADMIN_THEMES']))
@@ -69,7 +71,7 @@ class VMenu
     <div class="top-bar">
 <div class="top-bar-left">
 <ul class="menu">
-<li class="menu-text"><a href="../Php/index.php">CatClinic</a></li>
+<li class="menu-text"><a href="../Php/index.php"><img class="fitcat" src= "../Img/logocatclinicweb3.png" ></a></li>
 </ul>
 </div>
 <div class="top-bar-right">
@@ -78,12 +80,11 @@ $li
 $lii
 $lio     
 $liu
+ 
 </ul>
 </div>
 </div>
   
-  			
-    
    
 HERE;
   	 

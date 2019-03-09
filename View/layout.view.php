@@ -19,12 +19,13 @@ $vcontent = new $content['class']();
  <meta charset="utf-8" />
  <title><?=$content['title']?></title>
  <link rel="stylesheet" type="text/css" href="../Css/app.css" />
+ <link rel="stylesheet" type="text/css" href="../Css/menu.css" />
 </head>
 
 <body>
 
  <nav>
-  <?php $vmenu->showMenu() ?>
+  <?php $vmenu->showMenu() ?> 
  </nav>
 
  <div id="content">
@@ -54,13 +55,15 @@ $vcontent = new $content['class']();
      </div>
   </div>
 </div>-->
+<div class="map-responsive">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44842.82930008711!2d4.914948991929433!3d45.37551599276038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5250bf95b336d%3A0xc3e72e02dbaeabd4!2s38270+Bellegarde-Poussieu!5e0!3m2!1sfr!2sfr!4v1549871328200" width="600" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<hr>
+
 
 <div class="media-object">
 
-  <div class="media-object-section">
-    
-      <img src= "">
-    
+  <div class="media-object-section"> 
   </div>
   
   <div class="media-object-section main-section">
@@ -75,17 +78,13 @@ $vcontent = new $content['class']();
             <p>Les Urgences sont assurées 24h/24 et 7j/7 après appel téléphonique.</p>
   </div>
 
-  <div class="media-object-section align-self-middle">
-    
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44842.82930008711!2d4.914948991929433!3d45.37551599276038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5250bf95b336d%3A0xc3e72e02dbaeabd4!2s38270+Bellegarde-Poussieu!5e0!3m2!1sfr!2sfr!4v1549871328200" width="600" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
-    
-  </div>
+  
 </div>
 
 
 <hr>
-<footer>
 
+<footer>
   <div class="row column text-center">
   <p>SUZANNE Xavier . Examen NFA021 : CATCLINIC <img src= "../Img/logocatclinicweb.png" height="15%" width="15%"></p>
 
