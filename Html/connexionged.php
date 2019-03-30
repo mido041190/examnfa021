@@ -12,7 +12,7 @@ include('../Sql/bddged.php');
 </head>
 
 <?php
-//Si lutilisateur est connecte, on le deconnecte
+/*//Si lutilisateur est connecte, on le deconnecte
 if(isset($_SESSION['username']))
 {
 	//On le deconnecte en supprimant simplement les sessions username et userid
@@ -27,8 +27,11 @@ if(isset($_SESSION['username']))
 $link = mysqli_connect('localhost', 'root', '', 'coefcash');
 
 }
-else
+else*/
+
 {
+	$link = mysqli_connect('localhost', 'root', '', 'coefcash');
+	
 	$ousername = '';
 	//On verifie si le formulaire a ete envoye
 	if(isset($_POST['username'], $_POST['password']))

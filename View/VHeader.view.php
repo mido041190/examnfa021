@@ -1,15 +1,11 @@
-
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Foundation | Welcome</title>
-<link rel="stylesheet" href="../Css/app.css">
-</head>
-
 <?php
-
+/**
+ * Fichier de classe de type Vue
+ * pour l'affichage de l'entête
+ * @author Christian Bonhomme
+ * @version 1.0
+ * @package EXERCICE-MOOC
+ */
  
 /**
  * Classe pour l'affichage de l'entête
@@ -41,12 +37,11 @@ class VHeader
   public function showHeader()
   {
     echo <<<'NOW'
-<div class="expanded button-group">
 <ol>
- <a class="button"><li id="1">Modification</li></a>
- 
+ <li id="1">Page 1</li>
+ <li id="2">Page 2</li>
+ <li id="3">Page 3</li>
 </ol>
-</div>
 NOW;
 
     return;
@@ -55,4 +50,3 @@ NOW;
   
 } // VHeader
 ?>
-

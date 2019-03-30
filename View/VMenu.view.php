@@ -36,6 +36,7 @@ class VMenu
   	$data = $mthemes->SelectAll();
 
   	$li = '';
+    $lie = '';
     $lii = '';
     $lio = '';
   	foreach ($data as $val)
@@ -50,7 +51,6 @@ class VMenu
   	  }
   	  
   	  $li .= '<li><a '.$class.' href="'.$href.'">'.$val['THEME'].'</a></li>';
-      $lie = '<li><a href="../Php/index.php?EX=conseils">Conseils</a></li>';
       $lii = '<li><a href="../Php/index.php?EX=specialites">Spécialités</a></li>';
       $lio = '<li><a href="../Php/index.php?EX=equipe">Equipe</a></li>';
       $liu = '<li><a href="../Php/index.php?EX=connexionged">Membres</a></li>';
@@ -59,10 +59,15 @@ class VMenu
   	if (isset($_SESSION['ADMIN_DOC']) || isset($_SESSION['ADMIN_THEMES']))
   	{
   	  $li .= '<li><a '.$class.' href="../Php/index.php?EX=deconnect">DECONNEXION</a></li>';
+      $lie = '<li><a href="../Php/index.php?EX=conseils">ModifFiches</a></li>';
   	}
-  	
+  	 
+     
+    
+
   	/*$nouveau = isset($_SESSION['ADMIN_THEMES']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form_theme"><button>NOUVEAU THEME</button></a></p>' : '';	 
   	$nouveau_fond = isset($_SESSION['ADMIN_THEMES']) ? '<p class="nouveau"><a href="../Php/index.php?EX=form_fond"><button>NOUVEAU FOND</button></a></p>' : '';
+    $lie = isset($_SESSION['ADMIN_THEMES']) ? '<li><a href="../Php/index.php?EX=conseils">Conseils</a></li>';
 */
     
 
@@ -77,6 +82,7 @@ class VMenu
 <div class="top-bar-right">
 <ul class="menu">
 $li
+$lie
 $lii
 $lio     
 $liu
@@ -85,7 +91,6 @@ $liu
 </div>
 </div>
   
-   
 HERE;
   	 
   	return;

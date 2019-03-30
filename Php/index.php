@@ -29,6 +29,7 @@ switch($EX)
   case 'specialites'  : specialites();  break;
   case 'equipe'       : equipe();       break;
   case 'contact'      : contact();      break;
+  case 'page'         : page();         exit;
   case 'change'       : change();       exit;
   case 'connexionged' : connexionged(); break;
   case 'admin_themes' : admin_themes(); break;
@@ -80,7 +81,7 @@ function conseils()
   $content['title'] = 'Conseils';
   $content['class'] = 'VHtml';
   $content['method'] = 'showHtml';
-  $content['arg'] = '../Html/conseils.html';
+  $content['arg'] = '../Html/conseils.php';
   
   return;
 
@@ -98,7 +99,7 @@ function specialites()
   $content['title'] = 'Specialites';
   $content['class'] = 'VHtml';
   $content['method'] = 'showHtml';
-  $content['arg'] = '../Html/specialites.php';
+  $content['arg'] = '../Html/specialites.html';
   
   return;
 
@@ -138,6 +139,31 @@ function contact()
 
 } // home()
 
+/**
+ *  Affichage des pages
+ *  
+ *  @return none
+ */
+function page()
+{
+  // Aiguille suivant le numéro de page
+  switch($_POST['ID_PAGE'])
+  {
+    case 1 : $html = '../Upload/premiere.html';
+             break;
+    case 2 : $html = '../Upload/seconde.html';
+             break;
+    case 3 : $html = '../Upload/troisieme.html';
+             break;
+  }
+  
+  // Affiche la page
+  $vhtml = new VHtml();
+  $vhtml->showHtml($html);
+  
+  return;
+  
+} // page()
 
 /**
  * Modification du texte dans la page
@@ -149,11 +175,11 @@ function change()
   // Aiguille suivant le numéro de page
   switch($_POST['ID_PAGE'])
   {
-    case 1 : $html = '../Html/premiere.html';
+    case 1 : $html = '../Upload/premiere.html';
              break;
-    case 2 : $html = '../Html/seconde.html';
+    case 2 : $html = '../Upload/seconde.html';
              break;
-    case 3 : $html = '../Html/troisieme.html';
+    case 3 : $html = '../Upload/troisieme.html';
              break;
   }
   
@@ -407,6 +433,7 @@ function pdf()
  */
 function admin()
 {
+  debug($_SESSION);
   unset($_SESSION['ADMIN_THEMES']);
   
   $_SESSION['ADMIN_DOC'] = true; 

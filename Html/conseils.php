@@ -1,3 +1,11 @@
+<?php
+
+
+
+global $content;
+$vheader = new VHeader();
+$vcontent = new $content['class']();
+?>
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -10,6 +18,9 @@
 
 <body>
 
+<header>
+ <?php $vheader->showHeader(); ?>
+</header>
 
 <script src="../Js/exercice.js"></script>
 </body>
