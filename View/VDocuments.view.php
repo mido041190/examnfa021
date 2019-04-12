@@ -29,12 +29,12 @@ class VDocuments
       if (!isset($_SESSION['ADMIN_DOC']))
       {
         // Concaténation avec l'ancre et le titre de la catégorie
-        $tr .= '<tr><td><a href="../Php/index.php?EX=pdf&amp;FICHIER='.$val['FICHIER'].'" target="_blank">'.$val['TITRE'].'</a></td><td>'.$val['AUTEUR'].'</td><td>'.$val['FICHIER'].'</td></tr>';
+        $tr .= '<tr><td><a href="../Php/index.php?EX=pdf&amp;FICHIER='.$val['FICHIER'].'" target="_blank">'.$val['TITRE'].'</a></td>';
       }
       else
       {
       	// Concaténation avec l'ancre et le titre de la catégorie
-      	$tr .= '<tr><td><a href="../Php/index.php?EX=form&amp;ID_DOC='.$val['ID_DOC'].'">'.$val['TITRE'].'</a></td><td>'.$val['AUTEUR'].'</td><td>'.$val['FICHIER'].'</td></tr>';
+      	$tr .= '<tr><td><a href="../Php/index.php?EX=form&amp;ID_DOC='.$val['ID_DOC'].'">'.$val['TITRE'].'</a></td>';
       }
     }
     
@@ -43,20 +43,25 @@ class VDocuments
     </div>' : '';   
            
     echo <<<HERE
+    <div class="grid-x grid-padding-x align-center-middle text-center" >
+    <div class="cell small-12 medium-4 large-4">
     <div class="tabfiches">
     <h2 class="theme">{$_SESSION['THEME']}</h2>
 <table>
   <thead>
     <tr>
-      <th width="200">Titre</th>
-      <th width="150"></th>
-      <th width="150">Fichier</th>
+      
+      
     </tr>
   </thead>
+  
   <tbody>
+<th width="200">Titre</th>
     $tr
   </tbody>
 </table>
+</div>
+</div>
 </div>
 
 $nouveau

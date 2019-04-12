@@ -119,13 +119,13 @@ class MDocuments
    */
   public function Insert()
   {
-    $query = 'insert into DOCUMENTS (TITRE, AUTEUR, FICHIER)
-              values(:TITRE, :AUTEUR, :FICHIER)';
+    $query = 'insert into DOCUMENTS (TITRE, FICHIER)
+              values(:TITRE, :FICHIER)';
 
     $result = $this->conn->prepare($query);
     
     $result->bindValue(':TITRE',$this->value['TITRE'], PDO::PARAM_STR);
-    $result->bindValue(':AUTEUR',$this->value['AUTEUR'], PDO::PARAM_STR);
+    
     $result->bindValue(':FICHIER',$this->value['FICHIER'], PDO::PARAM_STR);
      
     $result->execute() or die ($this->ErrorSQL($result));

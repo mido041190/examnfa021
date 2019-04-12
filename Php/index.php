@@ -515,7 +515,7 @@ function insert()
   }
   
   $value['TITRE'] = $_POST['TITRE'];
-  $value['AUTEUR'] = $_POST['AUTEUR'];
+  
   	 
   $mdocuments = new MDocuments();
   $mdocuments->SetValue($value);
@@ -560,7 +560,7 @@ function update()
   if ($_POST['FICHIER_OLD']) unlink(UPLOAD . $_POST['FICHIER_OLD']);
 
   $value['TITRE'] = $_POST['TITRE'];
-  $value['AUTEUR'] = $_POST['AUTEUR'];
+  
   
   $mdocuments = new MDocuments($_GET['ID_DOC']);
   $mdocuments->SetValue($value);
@@ -617,11 +617,11 @@ function delete()
   $mdocuments = new MDocuments($_GET['ID_DOC']);
   $mdocuments->Delete();
   $mdocuments->DeleteThemesDocuments();
-  
+  echo "<!--";
   if ($_GET['FICHIER_OLD']) unlink(UPLOAD . $_GET['FICHIER_OLD']);
   
   document($_SESSION['ID_THEME']);
-  
+  echo "-->";
   return;
 
 } // delete()
