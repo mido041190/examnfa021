@@ -1,12 +1,3 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Foundation | Welcome</title>
-<link rel="stylesheet" href="../Css/app.css">
-<link rel="stylesheet" href="../Css/menu.css">
-</head>
 
 <?php
 
@@ -73,24 +64,35 @@ class VMenu
 
   	 
   	echo <<<HERE
-    <div class="top-bar">
-<div class="top-bar-left">
-<ul class="menu">
-<li class="menu-text"><a href="../Php/index.php"><img class="fitcat" src= "../Img/logocatclinicweb3.png" ></a></li>
-</ul>
+
+
+<div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
 </div>
-<div class="top-bar-right">
-<ul class="menu">
-$li
-$lie
-$lii
-$lio     
-$liu
- 
-</ul>
-</div>
-</div>
+
+<div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
   
+ <div class="top-bar-left">
+ <ul>
+  <li class="menu-text"><a href="../Php/index.php"><img class="fitcat" src= "../Img/logocatclinicweb3.png" alt="logocatclinic"></a></li>
+</ul>
+  </div>
+
+  <div class="top-bar-right">
+    <ul class="dropdown menu" data-dropdown-menu>
+  $li
+  $lie
+  $lii
+  $lio     
+  $liu
+    </ul>
+  </div>
+
+ 
+
+</div>
+
 HERE;
   	 
   	return;

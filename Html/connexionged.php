@@ -93,6 +93,9 @@ else*/
 	//On affiche le formulaire
 ?>
 
+<div class="grid-x grid-padding-x align-center-middle text-center" >
+  	
+
 <div class="membrecontent">
     <form class="callout text-center" action="../Html/connexionged.php" method="post">
         <h2>Veuillez entrer vos identifiants pour vous connecter:</h2>
@@ -105,6 +108,10 @@ else*/
 		</div>
     </form>
 </div>
+</div>
+
+
+
 <?php
 	}
 }

@@ -1,11 +1,5 @@
 <?php
-/**
- * Fichier de classe de type Vue
- * pour l'affichage de l'entête
- * @author Christian Bonhomme
- * @version 1.0
- * @package EXERCICE-MOOC
- */
+
  
 /**
  * Classe pour l'affichage de l'entête
@@ -37,11 +31,14 @@ class VHeader
   public function showHeader()
   {
     echo <<<'NOW'
-<ol>
- <li id="1">Page 1</li>
- <li id="2">Page 2</li>
- <li id="3">Page 3</li>
-</ol>
+<ul>
+ <li id="1">A la maison</li>
+ <li id="2">Comportement</li>
+ <li id="3">Conseils</li>
+ <li id="4">Griffoir</li>
+ <li id="5">Maladies</li>
+ <li id="6">Médicaments</li>
+</ul>
 NOW;
 
     return;

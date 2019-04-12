@@ -1,11 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Foundation | Welcome</title>
-<link rel="stylesheet" href="../Css/app.css">
-</head>
+
 
 <?php
 
@@ -149,12 +142,18 @@ function page()
   // Aiguille suivant le numéro de page
   switch($_POST['ID_PAGE'])
   {
-    case 1 : $html = '../Upload/premiere.html';
+    case 1 : $html = '../Upload/alamaison.html';
              break;
-    case 2 : $html = '../Upload/seconde.html';
+    case 2 : $html = '../Upload/comportement.html';
              break;
-    case 3 : $html = '../Upload/troisieme.html';
+    case 3 : $html = '../Upload/conseils.html';
              break;
+    case 4 : $html = '../Upload/griffoir.html';
+             break;
+    case 5 : $html = '../Upload/maladies.html';
+             break;
+    case 6 : $html = '../Upload/medicaments.html';
+             break;   
   }
   
   // Affiche la page
@@ -175,12 +174,18 @@ function change()
   // Aiguille suivant le numéro de page
   switch($_POST['ID_PAGE'])
   {
-    case 1 : $html = '../Upload/premiere.html';
+    case 1 : $html = '../Upload/alamaison.html';
              break;
-    case 2 : $html = '../Upload/seconde.html';
+    case 2 : $html = '../Upload/comportement.html';
              break;
-    case 3 : $html = '../Upload/troisieme.html';
+    case 3 : $html = '../Upload/conseils.html';
              break;
+    case 4 : $html = '../Upload/griffoir.html';
+             break;
+    case 5 : $html = '../Upload/maladies.html';
+             break;
+    case 6 : $html = '../Upload/medicaments.html';
+             break;        
   }
   
   // Appelle la classe MPages avec le fichier
@@ -433,7 +438,7 @@ function pdf()
  */
 function admin()
 {
-  debug($_SESSION);
+ 
   unset($_SESSION['ADMIN_THEMES']);
   
   $_SESSION['ADMIN_DOC'] = true; 
